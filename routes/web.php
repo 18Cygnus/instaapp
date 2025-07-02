@@ -21,4 +21,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
 
     Route::get('/image/{filename}', [ImageController::class, 'showImage'])->name('image.show');
+
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });

@@ -32,7 +32,10 @@
             </div>
             <div class="profile-button mt-4 flex items-center gap-2 w-full justify-center">
                 <button type="button" class="flex-1 px-4 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">Edit Profile</button>
-                <button type="button" class="flex-1 px-4 py-2 text-xs font-medium text-center border-black border text-black bg-white rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300">Log Out</button>
+                <form action="{{ route('logout') }}" method="post" class="w-1/2">
+                    @csrf
+                    <button type="submit" class="w-full px-4 py-2 text-xs font-medium text-center border-black border text-black bg-white rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300">Log Out</button>
+                </form>
             </div>
             <div class="highlight-story mt-4 gap-4 flex items-center justify-between">
                 <div class="size-16 flex justify-center items-center bg-white border border-gray-500 rounded-full">
