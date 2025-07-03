@@ -33,9 +33,9 @@
                 <button type="button" class="flex-1 px-4 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                     Edit Profile
                 </button>
-                <form action="{{ route('logout') }}" method="post" class="w-1/2">
+                <form action="{{ route('logout') }}" method="post" class="w-1/2" id="logout-form">
                     @csrf
-                    <button type="submit" onclick="confirmLogout()" class="w-full px-4 py-2 text-xs font-medium text-center border-black border text-black bg-white rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                    <button type="button" onclick="confirmLogout()" class="w-full px-4 py-2 text-xs font-medium text-center border-black border text-black bg-white rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-blue-300">
                         Log Out
                     </button>
                 </form>
