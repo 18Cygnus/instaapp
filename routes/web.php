@@ -23,4 +23,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/image/{filename}', [ImageController::class, 'showImage'])->name('image.show');
 
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::post('/posts/{post}/like', [PostController::class, 'like'])->name('posts.like');
+
+    Route::post('/comments', [PostController::class, 'addComment'])->name('comments.add');
 });

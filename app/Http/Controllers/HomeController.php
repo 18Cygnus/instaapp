@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         // $posts = Post::all();
-        $posts = Post::with('user', 'likes', 'comments')->get();
+        $posts = Post::with(['user', 'likes', 'comments.user'])->get();
 
         return view('users.pages.home', [
             'posts' => $posts
