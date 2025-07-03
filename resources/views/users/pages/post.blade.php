@@ -19,10 +19,21 @@
             <form action="{{ route('post.store')}}" class="w-sm mx-auto" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-5">
-                    <label for="image" class="block mb-2 text-sm font-medium text-gray-900 for="user_avatar">Upload file</label>
-                    <input name="image" required
-                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" 
-                        id="image" type="file">
+                    <label for="image" class="block mb-2 text-sm font-medium text-gray-900">Upload file</label>
+                    <div class="relative">
+                        <input name="image" required
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" 
+                            id="image" type="file" accept="image/*">
+                        <div id="file-info" class="hidden mt-2 items-center justify-between bg-blue-50 border border-blue-200 rounded-lg p-2">
+                            <div class="flex items-center">
+                                <i class="ri-image-line text-blue-600 mr-2"></i>
+                                <span id="file-name" class="text-sm text-blue-800"></span>
+                            </div>
+                            <button type="button" id="remove-file" class="text-red-500 hover:text-red-700 p-1">
+                                <i class="ri-close-circle-line text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="mb-5">
                     <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Caption</label>
@@ -35,4 +46,37 @@
         </div>
 
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileInput = document.getElementById('image');
+            const fileInfo = document.getElementById('file-info');
+            const fileName = document.getElementById('file-name');
+            const removeButton = document.getElementById('remove-file');
+
+            // Handle file selection
+            fileInput.addEventListener('change', function(e) {
+                if (e.target.files.length > 0) {
+                    const file = e.target.files[0];
+                    fileName.textContent = file.name;
+                    fileInfo.classList.remove('hidden');
+                    fileInfo.classList.add('flex');
+                } else {
+                    hideFileInfo();
+                }
+            });
+
+            // Handle remove file
+            removeButton.addEventListener('click', function() {
+                fileInput.value = '';
+                hideFileInfo();
+            });
+
+            function hideFileInfo() {
+                fileInfo.classList.add('hidden');
+                fileInfo.classList.remove('flex');
+                fileName.textContent = '';
+            }
+        });
+    </script>
 @endsection
