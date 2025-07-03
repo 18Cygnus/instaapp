@@ -8,12 +8,12 @@
             </svg>
             <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-300 ">Home</span>
         </a>
-        <a href="/post" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group">
-            <svg class="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-300 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z"/>
-                <path d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z"/>
+        <a href="/post"  type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group">
+            <svg class="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-300 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13.0001 10.9999L22.0002 10.9997L22.0002 12.9997L13.0001 12.9999L13.0001 21.9998L11.0001 21.9998L11.0001 12.9999L2.00004 13.0001L2 11.0001L11.0001 10.9999L11 2.00025L13 2.00024L13.0001 10.9999Z">
+            </path>
             </svg>
-            <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-300 ">Create Post</span>
+    <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-300">Create Post</span>
         </a>
         <a href="/profile" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 group">
             <svg class="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">

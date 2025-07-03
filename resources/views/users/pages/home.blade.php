@@ -3,7 +3,7 @@
 @section('user')
     <section class="flex flex-col w-full items-center bg-gray-200 pb-16">
         <div class="flex items-center justify-between w-[500px] px-4 py-5 bg-white fixed">
-            <h1 class="text-2xl font-bold">Instagram</h1>
+            <h1 class="text-2xl font-bold">InstaApp</h1>
             <i class="ri-chat-1-line text-2xl"></i>
         </div>
         <div class="p-3 flex w-full flex-col gap-2 pt-20">
@@ -12,7 +12,7 @@
                 <div class="card-profile px-4 py-3 flex items-center justify-between gap-4">
                     <div class="left-profile flex items-center gap-4">
                         <img src="{{ asset('img/profile.png') }}" alt="" class="w-10 rounded-full">
-                        <p>Arya</p>
+                        <p>{{$post->user->name}}</p>
                     </div>
                     <div class="right-profile">
                         <i class="ri-more-fill"></i>
@@ -25,11 +25,11 @@
                 <div class="card-action px-4 py-1 flex items-center gap-3">
                     <div class="flex items-center gap-1">
                         <i class="ri-heart-line"></i>
-                        <p>10</p>
+                        <p>{{$post->likes->count()}}</p>
                     </div>
                     <div class="flex items-center gap-1">
                         <i class="ri-message-3-line"></i>
-                        <p>3</p>
+                        <p>{{$post->comments->count()}}</p>
                     </div>
                 </div>
             </div>
