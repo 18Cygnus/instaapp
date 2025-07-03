@@ -2,9 +2,8 @@
 
 @section('user')
     <section class="flex flex-col w-full items-center bg-gray-200 pb-16">
-        <div class="app-name flex items-center justify-between w-[500px] px-4 py-5 bg-white fixed">
+        <div class="app-name flex items-center justify-start w-[500px] px-4 py-5 bg-white fixed">
             <h1 class="text-2xl font-bold">InstaApp</h1>
-            <i class="ri-chat-1-line text-2xl"></i>
         </div>
         <div class="p-3 flex w-full flex-col gap-2 pt-20">
             @foreach ( $posts as $post )
